@@ -4,9 +4,13 @@ set -euo pipefail # unofficial bash strict mode
 
 source ./compile_utils.sh
 
+stdheader fstream
 stdheader iostream
+stdheader optional
+stdheader stream
 
-compile helloworld
+compile file_writer
+compile helloworld file_writer
 compile main helloworld
 
 link hello
