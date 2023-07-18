@@ -47,7 +47,7 @@ compile () {
     for target in "$@"
     do
         local target_file
-        target_file="$(get_obj_file_from_target ${target})"
+        target_file="$(get_obj_file_from_target "${target}")"
         if [ "${obj_file}" -ot "${target_file}" ]
         then
             ${log}
@@ -77,8 +77,6 @@ link () {
     echo "linking"
     "${GCC}" "${CPP_FLAGS[@]}" ./build/*.o -o "${executable_name}"
 }
-
-LINK="${GCC} ${CPP_FLAGS[*]}"
 
 mkdir -vp ./build ./gcm.cache
 
