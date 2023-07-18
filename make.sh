@@ -7,6 +7,7 @@ source ./compile_utils.sh
 stdheader fstream
 stdheader iostream
 stdheader optional
+stdheader string
 
 compile file_writer
 compile helloworld file_writer
